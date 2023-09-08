@@ -12,9 +12,7 @@ body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
 }
-.icon {
-    filter: invert(1);
-}
+
 h2 {
     margin-bottom: 20px;
 }
@@ -26,7 +24,6 @@ body {
 
 /* Header styles */
 header {
-    background-color: #3498db;
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -56,7 +53,6 @@ main {
 .project-card img {
     max-width: 100%;
     height: auto;
-    /* border: 2px solid blueviolet; */
     border-radius: 5px;
 }
 
@@ -73,27 +69,21 @@ main {
 
 .project-card a {
     display: inline-block;
-    
-    /* padding: 10px 20px; */
-    /* background-color: #3498db; */
-    /* background-color: #000; */
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
     transition: background-color 0.2s;
 }
 
 .project-card a i {
     font-size: 2rem;
     color: red;
-    /* margin-left: 0px; */
 }
 
 span {
-    margin-left: 20px;
+    color: #000;
     font-weight: bolder;
 }
-.project-card .youtube:hover {
+.project-card .youtube a:hover {
     background-color:blueviolet;
     filter: drop-shadow(2px 2px 2px black);
     cursor: pointer;
@@ -110,18 +100,14 @@ ul, h3{
     justify-content: center;
     gap: 20px;
     border: 1px solid black;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     max-width: 200px;
     width: auto;
     margin: 0 10%;
 
 }
 
-.project-card .youtube .yt-icon {
-    align-items:flex-end;
-
-}
 /* Footer styles */
 footer {
     background-color: #000;
@@ -149,7 +135,7 @@ footer {
                     <li>Recipe Page</li>
                 </ul>
                 <div class="youtube">
-                <span>Watch Now</span><a href="https://youtu.be/dPI6rLHynS8" target="_blank"><i class="fa-brands fa-youtube yt-icon"></i></a>
+                <a href="https://youtu.be/dPI6rLHynS8" target="_blank"><span>Watch Now</span><i class="fa-brands fa-youtube yt-icon"></i></a>
                 </div>
             </div>
             <!-- Repeat for more projects -->
@@ -158,12 +144,12 @@ footer {
                 <h2>Day 2</h2>
                 <h3>Subject</h3>
                 <ul>
-                    <li>Portfolio Page</li>
-                    <li>FAQ Page</li>
-                    <li>Recipe Page</li>
+                    <li>Newsletter Page</li>
+                    <li>Event Invitation Page</li>
+                    <li>Contact Form Page</li>
                 </ul>
                 <div class="youtube">
-                    <span>Watch Now</span><a href="https://youtu.be/8oxOuZAaZDw" target="_blank"><i class="fa-brands fa-youtube yt-icon"></i></a>
+                    <a href="https://youtu.be/8oxOuZAaZDw" target="_blank"><span>Watch Now</span><i class="fa-brands fa-youtube yt-icon"></i></a>
                 </div>
             </div>
             <!-- Repeat for more projects -->
@@ -173,12 +159,12 @@ footer {
                 <h2>Day 3</h2>
                 <h3>Subject</h3>
                 <ul>
-                    <li>Portfolio Page</li>
-                    <li>FAQ Page</li>
-                    <li>Recipe Page</li>
+                    <li>404 Error Page</li>
+                    <li>Countdown Timer Page</li>
+                    <li>Comming Soon Page</li>
                 </ul>
                 <div class="youtube">
-                    <span>Watch Now</span><a href="https://youtu.be/d6VcTk5dXmE" target="_blank"><i class="fa-brands fa-youtube yt-icon"></i></a>
+                    <a href="https://youtu.be/d6VcTk5dXmE" target="_blank"><span>Watch Now</span><i class="fa-brands fa-youtube yt-icon"></i></a>
                 </div>
             </div>
             <!-- Repeat for more projects -->
