@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#countdown div {
+    margin: 0 10px;
+}
+
+#countdown span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>This video is under construction. We'll be back soon!</p>
+        <div id="countdown">
+            <div>
+                <span id="hours">00</span>
+                <span>Hours</span>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateCountdown() {
+    // Set the target time to 15:00:00 (3:00 PM) today
+    const targetDate = new Date();
+    targetDate.setHours(15, 0, 0, 0);
+
+    const currentDate = new Date();
+    const timeDifference = targetDate - currentDate;
+
+    if (timeDifference <= 0) {
+        document.getElementById("countdown").innerHTML = "<p>Website is live!</p>";
+        return;
+    }
+
+    const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+}
+
+setInterval(updateCountdown, 1000); // Update countdown every second
+
+
+    </script>
+</body>
+</html>
